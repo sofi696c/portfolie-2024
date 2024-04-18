@@ -25,6 +25,10 @@
   box-sizing: border-box;
 }
 
+html{
+  scroll-behavior: smooth;
+}
+
 .container {
   max-width: 1100px;
   margin: 0 auto;

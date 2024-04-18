@@ -9,32 +9,13 @@ const router = createRouter({
       name: 'home',
       component: HomeView
     },
-    /* {
-      path: '/om-mig',
-      name: 'om-mig',
-      // route level code-splitting
-      // this generates a separate chunk (About.[hash].js) for this route
-      // which is lazy-loaded when the route is visited.
-      component: () => import('../views/OmMig.vue')
+    
+/*     {
+      path: '/trapholtweb',
+      name: 'trapholtweb',
+      component: () => import('../views/TrapholtWeb.vue')
     },
-
-    {
-      path: '/mine-projekter',
-      name: 'mine-projekter',
-      // route level code-splitting
-      // this generates a separate chunk (About.[hash].js) for this route
-      // which is lazy-loaded when the route is visited.
-      component: () => import('../views/MineProjekter.vue')
-    },
-
-    {
-      path: '/kontakt',
-      name: 'kontakt',
-      // route level code-splitting
-      // this generates a separate chunk (About.[hash].js) for this route
-      // which is lazy-loaded when the route is visited.
-      component: () => import('../views/Kontakt.vue')
-    } */
+ */
 
   ]
 })

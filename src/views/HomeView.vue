@@ -1,8 +1,8 @@
 <template>
   <div class="hjem-site">
-    <div class="background-overlay"></div> <!-- Add an overlay for opacity -->
+<!--     <div class="background-overlay"></div> 
     <div class="swirl-img"></div>
-
+ -->
     <div class="velkommen">
       <div class="velkommen-card" :class="{ expanded: isExpanded }">
           <!-- Content for the first column -->
@@ -34,31 +34,38 @@
     </div>
 
     <div class="om-mig">
-      <h1>Om mig</h1>
-        <div class="cv-card">
-          <div class="column">
-            <!-- Content for the first column -->
-            <h3>
-              Se denne korte video, <br>
-              hvor jeg fortæller lidt <br>
-              om mig selv!
-            </h3>
-            <button class="expand-button cv-button">Download mit CV</button>
-          </div>
-          <div class="column">
-            <div class="card-content">
-              <!-- Other content within the card -->
-            </div>  
-            <!-- YouTube embed code -->
-            <div class="video-container">
-              <iframe width="560" height="315" src="https://www.youtube.com/embed/Sk-EPj8-Lvw" frameborder="0" allowfullscreen></iframe>
-            </div>
+
+    <h1>Om mig</h1>
+      <div class="cv-card">
+        <div class="cv-column">
+          <!-- Content for the first column -->
+          <h3>
+            Se denne korte video, <br>
+            hvor jeg fortæller lidt <br>
+            om mig selv!
+          </h3>
+
+          <button class="cv-button" onclick="window.open('./cv-FINAL.pdf','_blank')">Download mit CV her!</button>
+
+        </div>
+
+        <div class="column">
+          <div class="card-content">
+            <!-- Other content within the card -->
+          </div>  
+
+          <!-- YouTube embed code -->
+          <div class="video-container">
+            <iframe width="600vh" height="350vh" src="https://www.youtube.com/embed/Sk-EPj8-Lvw" frameborder="0" allowfullscreen></iframe>
           </div>
         </div>
+
+      </div>
+
     </div>
 
 
-    <div class="projekter">
+    <div id="mine-projekter" class="projekter">
       <h1>Mine projekter</h1>
 
       <div class="projekt-card">
@@ -74,7 +81,11 @@
             hvilket resulterede i en hjemmeside, der ikke kun fremviste museets unikke identitet, 
             men også tiltrak og engagerede besøgende på tværs af digitale platforme. -->
 
+<!--         <router-link to="/trapholtweb">Se mere -->
           <button class="expand-button">Se mere</button>
+<!--         </router-link> -->
+          
+
         </div>
 
         <div class="column">
@@ -127,7 +138,9 @@
             designet med fokus på brugervenlighed, æstetik og funktionalitet med det formål at
             tiltrække og engagere besøgende på en intuitiv måde.</p>
              
-          <button class="expand-button">Se mere</button>
+          <button class="expand-button">
+            Se mere
+          </button>
         </div>
 
         <div class="column">
@@ -223,7 +236,7 @@
 
   
 
-    <div class="kontakt">
+    <div id="kontakt" class="kontakt">
         <div class="kontakt-card">
           <div class="column">
             <!-- Content for the first column -->
@@ -243,9 +256,10 @@
               <div class="info-card">
                 <div class="line"></div>
                 <div class="info">
-                  <p class="p2">+45 42 26 52 03</p>
-                  <p class="p2">sofie.fischer@live.com</p>
-                  <p class="p2">www.linkedin.com/in/sofie-fischer</p>
+                  <p class="p2"><i class="fas fa-phone"></i>
+                  +45 42 26 52 03</p>
+                  <p class="p2"><i class="fas fa-envelope"></i>sofie.fischer@live.com</p>
+                  <p class="p2"><i class="fab fa-linkedin"></i> www.linkedin.com/in/sofie-fischer</p>
                 </div>
               
               </div>  
@@ -259,12 +273,11 @@
 <script>
 
 
-
 </script>
 
 
   
-<style>
+<style lang="scss">
 .test{
   display: flex;
   justify-content: center;
@@ -273,14 +286,23 @@
   
 }
 
-  .cv-button {
-  background-color: #AA8484; /* Green background color */
-  border: none; /* Remove borders */
-  color: white; /* White text color */
-  font-size: 16px; /* Set the font size */
-  cursor: pointer; /* Add a pointer cursor on mouse-over */
-  padding: 10px 20px;
+.fa-phone {
+  color: #965151;
 }
+
+.fa-envelope {
+  color: #965151;
+}
+.fa-linkedin {
+  color: #965151;
+}
+
+.column {
+    flex: 1;
+    margin: 0 10px;
+  }
+
+  
 
 .expand-button {
   background-color: #AA8484;
@@ -288,13 +310,15 @@
   color: white;
   font-size: 16px;
   padding: 10px 20px;
+  z-index: 4;
   transition: background-color 0.3s, color 0.3s; /* Tilføjet transition for flydende overgangseffekt */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add box-shadow for depth */
 }
 
 .expand-button:hover {
   background-color: #b69999; /* Ændrer baggrundsfarven ved hover */
   cursor: pointer;
-  z-index: 5;
+  z-index: 4;
 }
 
  
@@ -305,9 +329,9 @@
     background-repeat: no-repeat; /* Prevent the background image from repeating */
     background-size: 90%; /* Cover the entire element with the background image */
     background-position: center; /* Center the background image */
-    height: 6500px;
-    position: relative; 
-    z-index: -1;
+    height: fit-content;
+    /*     position: relative; 
+     z-index: -1;  */
   
     .background-overlay {
       position: absolute;
@@ -341,18 +365,17 @@
     padding: 10% 16px;
     z-index: 2;
   }
-    .column {
-    flex: 1;
-    margin: 0 10px;
-  }
+
 
   .velkommen-card {
-    padding: 20px;
+    padding: 2% 0;
     display: flex;
-    height: 500px;
+    height: auto;
     width: 80%;
     justify-content: center;
     align-items: center;
+    background-color: #d5ded5;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add box-shadow for depth */
   }
 
   .mig-billede {
@@ -361,7 +384,7 @@
   height: auto;
   width: 5vh;
   display: flex;
-}
+  } 
 
   .billede {
     flex-wrap: wrap;
@@ -371,9 +394,7 @@
     width: 80%;
     height: auto;
     width: 50vh;
-    margin-right: 5%;
     border: lightgray solid 1px;
-    margin-left: 500px;
 
   }
 
@@ -384,26 +405,47 @@
     justify-content: center;
     width: 100%; /* Adjust width as needed */
     margin: 0 auto;
-    padding: 10% 16px;
+    padding: 10vh 0;
   }
 
-  .video-cv {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
+    .video-cv {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 
-.cv-card {
-  padding: 20px;
-  display: flex;
-  height: 500px;
-  width: 80%;
-  justify-content: center;
-  align-items: center;
-  background-color: rgba(255, 255, 255, 0.60); /* White background color with 0.75 opacity */
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add box-shadow for depth */
+  .cv-card {
+    padding: 5vh;
+    display: flex;
+    height: auto;
+    width: 80%;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.60); /* White background color with 0.75 opacity */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add box-shadow for depth */
 
-}
+  }
+
+  .cv-column {
+    flex: 1;
+    margin: 0 10px;
+  }
+
+  .cv-button {
+    background-color: #AA8484; /* Green background color */
+    border: none; /* Remove borders */
+    color: white; /* White text color */
+    font-size: 16px; /* Set the font size */
+    cursor: pointer; /* Add a pointer cursor on mouse-over */
+    padding: 10px 20px;
+    transition: background-color 0.3s, color 0.3s; /* Tilføjet transition for flydende overgangseffekt */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add box-shadow for depth */
+  }
+  .cv-button:hover {
+    background-color: #b69999; /* Ændrer baggrundsfarven ved hover */
+    cursor: pointer;
+    
+  }
 
   .invi-img {
     width: 80%;
@@ -463,10 +505,7 @@
     margin-bottom: 5%;
   }
 
-  h3 {
-    font-size: 25px;
-    margin-bottom: 5%;
-  }
+ 
 
   .p1 {
     text-align: left;
@@ -497,10 +536,7 @@
     padding: 10% 16px;
     z-index: 2;
   }
-    .column {
-    flex: 1;
-    margin: 0 10px;
-  }
+  
 
   .projekt-card {
     padding: 20px;
@@ -547,8 +583,8 @@
 
   h3 {
     font-size: 25px;
-    margin-bottom: 2.5%;
-    margin-left: 15%;
+    margin-bottom: 15%;
+
   }
   .p1 {
     text-align: left;
@@ -651,11 +687,10 @@
   .velkommen-card {
     flex-direction: column; /* Change flex-direction to column */
     height: 100%; /* Adjust the height as needed */
+    display: flex;
+
   }
 
-  .mig-billede {
-    padding-left: 0; /* Remove padding on the left */
-  }
 
   .om-mig {
     padding: 10% 16px; /* Adjust padding as needed */
@@ -665,6 +700,8 @@
     flex-direction: column; /* Change flex-direction to column */
     height: 100%; /* Adjust the height as needed */
   }
+
+  
 
   .video-container {
     width: 100%; /* Adjust the width as needed */
