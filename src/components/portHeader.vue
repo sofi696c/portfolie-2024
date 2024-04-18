@@ -6,7 +6,6 @@
       </div>
 
       <ul class="nav-routes">
-        <li><router-link to="/">Hjem</router-link></li>
         <li><router-link to="/om-mig">Om mig</router-link></li>
         <li><router-link to="/mine-projekter">Mine projekter</router-link></li>
         <li><router-link to="/kontakt">Kontakt</router-link></li>
@@ -52,10 +51,13 @@ nav {
 }
 
 .logo {
-  font-size: 24px;
+  font-size: 30px;
   font-weight: 700;
   color: #965151;
+  font-family: pacifico;
+  
 }
+
 
 .nav-routes {
   display: flex;

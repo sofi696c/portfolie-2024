@@ -17,9 +17,10 @@
 
 <style lang="scss">
 @import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
 
 * {
-  font-family: "Rubik", sans-serif;
+  font-family: "Rubik", sans-serif, "Pacifico", cursive;
   margin: 0;
   padding: 0;
   box-sizing: border-box;

@@ -56,7 +56,7 @@
 
           <!-- YouTube embed code -->
           <div class="video-container">
-            <iframe width="600vh" height="350vh" src="https://www.youtube.com/embed/Sk-EPj8-Lvw" frameborder="0" allowfullscreen></iframe>
+            <iframe width="100%" height="300vh" src="https://www.youtube.com/embed/Sk-EPj8-Lvw" frameborder="0" allowfullscreen></iframe>
           </div>
         </div>
 
@@ -252,16 +252,14 @@
           </div>
 
           <div class="column">
-            <!--Dette er højre side af cardet-->      
+              <!-- Dette er højre side af cardet -->      
               <div class="info-card">
-                <div class="line"></div>
-                <div class="info">
-                  <p class="p2"><i class="fas fa-phone"></i>
-                  +45 42 26 52 03</p>
-                  <p class="p2"><i class="fas fa-envelope"></i>sofie.fischer@live.com</p>
-                  <p class="p2"><i class="fab fa-linkedin"></i> www.linkedin.com/in/sofie-fischer</p>
-                </div>
-              
+                  <div class="line"></div>
+                  <div class="info">
+                      <p class="p2"><i class="fas fa-phone"></i> <span class="icon-text">+45 42 26 52 03</span></p>
+                      <p class="p2"><i class="fas fa-envelope"></i> <span class="icon-text">sofie.fischer@live.com</span></p>
+                      <p class="p2"><i class="fab fa-linkedin"></i> <span class="icon-text">www.linkedin.com/in/sofie-fischer</span></p>
+                  </div>
               </div>  
           </div>
         </div>
@@ -374,7 +372,7 @@
     width: 80%;
     justify-content: center;
     align-items: center;
-    background-color: #d5ded5;
+    background-color: #d4dad4;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add box-shadow for depth */
   }
 
@@ -382,7 +380,6 @@
   justify-content: center;
   width: auto; /* Increase the width to occupy more space */
   height: auto;
-  width: 5vh;
   display: flex;
   } 
 
@@ -446,52 +443,51 @@
     cursor: pointer;
     
   }
+  .t-img {
+    width: 80%;
+    height: auto;
+    margin-bottom: 2.5%;
+  }
 
   .invi-img {
     width: 80%;
-    height: 200px;
+    height: auto;
     margin-bottom: 2.5%;
-    margin-left: 20%;
 
   }
 
   .trifold-img {
     width: 80%;
-    height: 200px;
+    height: auto;
     margin-bottom: 2.5%;
-    margin-left: 20%;
 
   }
 
   .ditzel-img {
     width: 80%;
-    height: 200px;
+    height: auto;
     margin-bottom: 2.5%;
-    margin-left: 20%;
 
   }
 
   .kleen-keester-img {
     width: 80%;
-    height: 400px;
+    height: auto;
     margin-bottom: 2.5%;
-    margin-left: 20%;
 
   }
 
   .reops-img {
     width: 80%;
-    height: 200px;
+    height: auto;
     margin-bottom: 2.5%;
-    margin-left: 20%;
 
   }
 
   .coffee-img {
     width: 80%;
-    height: 200px;
+    height: auto;
     margin-bottom: 2.5%;
-    margin-left: 20%;
 
   }
 
@@ -545,7 +541,7 @@
     width: 70%;
     justify-content: center;
     align-items: center;
-    background-color: rgba(255, 255, 255, 0.60); /* White background color with 0.75 opacity */
+    background-color: #d4dad4; /* White background color with 0.75 opacity */
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add box-shadow for depth */
     margin-bottom: 50px;
   }
@@ -557,13 +553,7 @@
     align-items: flex-start;
   }
 
-  .t-img {
-    width: 80%;
-    height: 200px;
-    margin-right: 5%;
-    border: lightgray solid 1px;
 
-  }
 
 
 
@@ -575,9 +565,6 @@
 
 
 
-  .billede {
-    flex-wrap: wrap;
-  }
 
 
 
@@ -677,16 +664,31 @@
   }
 }
 
+.icon-text {
+    margin-left: 8px; /* Adjust this value as needed for the desired space */
+}
+
 /* Media query for smaller screens */
 @media (max-width: 768px) {
- 
-  .swirl-img {
-    display: none; /* Hide the background image on smaller screens */
+
+
+  
+  .mig-img {
+    display: none;
+
   }
+
+  .column {
+    flex-direction: column; /* Change flex-direction to column */
+    height: auto; /* Allow the height to adjust based on content */
+    justify-content: center;
+  }
+ 
+
 
   .velkommen-card {
     flex-direction: column; /* Change flex-direction to column */
-    height: 100%; /* Adjust the height as needed */
+    height: auto; /* Adjust the height as needed */
     display: flex;
 
   }
@@ -703,9 +705,7 @@
 
   
 
-  .video-container {
-    width: 100%; /* Adjust the width as needed */
-  }
+
 
   .mine-projekter {
     padding: 10% 16px; /* Adjust padding as needed */
@@ -733,7 +733,7 @@
 
   .kontakt-card {
     flex-direction: column; /* Change flex-direction to column */
-    height: auto; /* Allow the height to adjust based on content */
+    height: auto !important; /* Allow the height to adjust based on content */
     overflow: auto;
   }
 
@@ -745,6 +745,75 @@
     flex-direction: column; /* Change flex-direction to column */
     height: auto; /* Allow the height to adjust based on content */
   }
+  
+  .cv-column {
+    justify-content: center;
+  }
+
+  .t-img {
+    width: 80%;
+    height: auto;
+    margin-bottom: 2.5%;
+
+    
+  }
+
+  .invi-img {
+    width: 80%;
+    height: auto;
+    margin-bottom: 2.5%;
+
+  }
+
+  .trifold-img {
+    width: 80%;
+    height: auto;
+    margin-bottom: 2.5%;
+
+  }
+
+  .ditzel-img {
+    width: 80%;
+    height: auto;
+    margin-bottom: 2.5%;
+
+  }
+
+  .kleen-keester-img {
+    width: 80%;
+    height: auto;
+    margin-bottom: 2.5%;
+
+  }
+
+  .reops-img {
+    width: 80%;
+    height: auto;
+    margin-bottom: 2.5%;
+
+
+  }
+
+  .coffee-img {
+    width: 80%;
+    height: auto;
+    margin-bottom: 2.5%;
+
+
+  }
+
+  .cv-card {
+    padding: 5vh;
+    display: flex;
+    height: auto;
+    width: 80%;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.60); /* White background color with 0.75 opacity */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add box-shadow for depth */
+  }
+
+
 }
 
 
