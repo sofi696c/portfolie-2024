@@ -8,16 +8,18 @@
         <div class="card">
             <div class="column">
                 <h1>Sofie S. Fischer</h1>
-                <p>Web designer, grafisk designer, UX-designer baseret i Esbjerg, Danmark.</p>
+                <p class="p1">Web designer, grafisk designer, UX-designer baseret i Esbjerg, Danmark.</p>
             </div>
             <div class="column">
                 <div class="column">
                     <nav>
                         <ul class="nav-routes">
-                            <li><RouterLink to="/hjem">Tilbage til toppen</RouterLink></li>
-                            <li><RouterLink to="/om-mig">Om mig</RouterLink></li>
-                            <li><RouterLink to="/mine-projekter">Mine Projekter</RouterLink></li>
-                            <li><RouterLink to="/kontakt">Kontakt</RouterLink></li>
+                            <ul class="nav-routes">
+                                <li class="nav-links"><a href="#scrollTilHjem">Tilbage til start</a></li>
+                                <li class="nav-links"><a href="#scrollTilOm">Om mig</a></li>
+                                <li class="nav-links"><a href="#scrollTilProjekter">Mine projekter</a></li>
+                                <li class="nav-links"><a href="#scrollTilKontakt">Kontakt</a></li>
+                            </ul>
                         </ul>
                     </nav>
                 </div>
@@ -64,6 +66,12 @@
         padding-bottom: 1vh;
     }
 
+    .p1{
+        padding-bottom: 3vh;
+        font-family: 'Raleway', sans-serif;
+        font-size: 16px;
+        margin-left: 25px;
+    }
     .logo {
         font-size: 24px;
         font-weight: 700;

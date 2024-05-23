@@ -6,9 +6,10 @@
       </div>
 
       <ul class="nav-routes">
-        <li><router-link to="/om-mig">Om mig</router-link></li>
-        <li><router-link to="/mine-projekter">Mine projekter</router-link></li>
-        <li><router-link to="/kontakt">Kontakt</router-link></li>
+        <li class="nav-links"><a href="#scrollTilHjem">Hjem</a></li>
+        <li class="nav-links"><a href="#scrollTilOm">Om mig</a></li>
+        <li class="nav-links"><a href="#scrollTilProjekter">Mine projekter</a></li>
+        <li class="nav-links"><a href="#scrollTilKontakt">Kontakt</a></li>
       </ul>
     </nav>
   </header>

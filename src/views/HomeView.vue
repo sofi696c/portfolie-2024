@@ -3,7 +3,7 @@
 <!--     <div class="background-overlay"></div> 
     <div class="swirl-img"></div>
  -->
-    <div class="velkommen">
+    <div id="scrollTilHjem" class="velkommen">
       <div class="velkommen-card" :class="{ expanded: isExpanded }">
           <!-- Content for the first column -->
         <div class="column">  
@@ -33,7 +33,7 @@
       </div>
     </div>
 
-    <div class="om-mig">
+    <div id="scrollTilOm" class="om-mig">
 
     <h1>Om mig</h1>
       <div class="cv-card">
@@ -65,7 +65,7 @@
     </div>
 
 
-    <div id="mine-projekter" class="projekter">
+    <div id="scrollTilProjekter" class="projekter">
       <h1>Mine projekter</h1>
 
       <div class="projekt-card">
@@ -81,9 +81,7 @@
             hvilket resulterede i en hjemmeside, der ikke kun fremviste museets unikke identitet, 
             men også tiltrak og engagerede besøgende på tværs af digitale platforme. -->
 
-<!--         <router-link to="/trapholtweb">Se mere -->
-          <button class="expand-button">Se mere</button>
-<!--         </router-link> -->
+
           
 
         </div>
@@ -109,9 +107,6 @@
             Resultatet var en serie infografikker, der formidlede museets unikke identitet og tiltrak 
             besøgende på en visuelt tiltalende måde.</p>
 
-
-             
-          <button class="expand-button">Se mere</button>
         </div>
 
         <div class="column">
@@ -138,9 +133,8 @@
             designet med fokus på brugervenlighed, æstetik og funktionalitet med det formål at
             tiltrække og engagere besøgende på en intuitiv måde.</p>
              
-          <button class="expand-button">
-            Se mere
-          </button>
+
+
         </div>
 
         <div class="column">
@@ -165,7 +159,7 @@
             og finde relevante jobmuligheder.</p>
 
              
-          <button class="expand-button">Se mere</button>
+
         </div>
 
         <div class="column">
@@ -191,7 +185,7 @@
                  caféens kunder.</p>
 
              
-          <button class="expand-button">Se mere</button>
+
         </div>
 
         <div class="column">
@@ -218,7 +212,6 @@
             Vi håber, at du vil nyde resultatet og glæde dig til at deltage i fejringen af
             denne særlige dag.</p>
              
-          <button class="expand-button">Se mere</button>
         </div>
 
         <div class="column">
@@ -236,7 +229,7 @@
 
   
 
-    <div id="kontakt" class="kontakt">
+    <div id="scrollTilKontakt" class="kontakt">
         <div class="kontakt-card">
           <div class="column">
             <!-- Content for the first column -->
@@ -414,7 +407,7 @@
   .cv-card {
     padding: 5vh;
     display: flex;
-    height: auto;
+    height: 65vh;
     width: 80%;
     justify-content: center;
     align-items: center;
@@ -492,11 +485,13 @@
   }
 
   h1 {
+    font-family: 'raleway', sans-serif;
     font-size: 35px;
     margin-bottom: 5%;
   }
 
   h2 {
+    font-family: 'raleway', sans-serif;
     font-size: 35px;
     margin-bottom: 5%;
   }
@@ -504,6 +499,7 @@
  
 
   .p1 {
+    font-family: 'Raleway', sans-serif;
     text-align: left;
     padding-bottom: 2.5%;
     width: 90%;
@@ -559,9 +555,6 @@
 
 
 
-  .projekt-card.expanded {
-  height: 600px; /* Adjust the height as needed */
-}
 
 
 
@@ -569,6 +562,7 @@
 
 
   h3 {
+    font-family: 'raleway', sans-serif;
     font-size: 25px;
     margin-bottom: 15%;
 
@@ -581,6 +575,7 @@
   }
 
   .p2 {
+    font-family: 'raleway', sans-serif;
     text-align: left;
     padding-bottom: 20px;
     width: fit-content;
@@ -588,6 +583,7 @@
   }
 
   .p3 {
+    font-family: 'raleway', sans-serif;
     text-align: left;
     padding-bottom: 20px;
     width: fit-content;
@@ -805,7 +801,7 @@
   .cv-card {
     padding: 5vh;
     display: flex;
-    height: auto;
+    height: auto !important;
     width: 80%;
     justify-content: center;
     align-items: center;
