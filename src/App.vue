@@ -2,6 +2,8 @@
   import { RouterView } from 'vue-router'
   import portHeader from './components/portHeader.vue';
   import portFooter from './components/portFooter.vue';
+
+  
 </script>
 
 <template>
